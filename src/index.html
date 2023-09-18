@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dawid Stasiński</title>
+    <link rel="icon" type="image/x-icon" href="assets/github.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+  </head>
+  <body>
+    <div class="navigationBar">
+      <b>Dawid.dev</b>
+      <a href="#contact-heading">Contact</a>
+      <a href="#images-heading">Images</a>
+      <a href="#projects-heading">Projects</a>
+      <a href="#about-heading">About</a>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <h1 class="hidden">
+          Hello, I'm Dawid Stasiński. A passionate junior software developer
+        </h1>
+        <p class="hidden">kfjsafsjalk</p>
+        <img
+          class="hidden"
+          src="assets/IMG_8416retkadr (Copy).jpg"
+          width="300"
+          alt="Picture of me 😋"
+        />
+      </div>
+
+      <h2 class="about-heading hidden" id="about-heading">About me</h2>
+      <p class="about-me hidden">
+        Hello <br />I'm a Computer Science student at University of Wrocław In
+        Poland. I possess strong skills in Python, C++ and problem solving. At
+        the moment I'm learning JavaScript, React, HTML and CSS.
+      </p>
+
+      <h3 class="projects-heading hidden" id="projects-heading">My projects</h3>
+      <div class="projects-container hidden"></div>
+
+      <h4 class="images-heading hidden" id="images-heading">My images</h4>
+      <div class="carausel hidden">
+        <button class="carausel-button forward" onclick="moveCarausel(-1)">
+          &#x3c;
+        </button>
+        <button class="carausel-button backward" onclick="moveCarausel(1)">
+          &#x3e;
+        </button>
+        <ul class="image-container"></ul>
+      </div>
+
+      <div class="contact">
+        <h5 class="contact-heading hidden" id="contact-heading">Contact</h5>
+        <div class="contact-info">
+          <div class="location hidden">
+            <a>
+              <img src="assets/icons/location.png" alt="location" />
+              <p>Wrocław, Lower Silesia, Poland</p>
+            </a>
+          </div>
+          <div class="mail hidden">
+            <a href="mailto:dawidstasinski12@gmail.com">
+              <img src="assets/icons/mail.png" alt="e-mail" />
+              <p>dawidstasinski12@gmail.com</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottomBar">
+        <a
+          class="hidden"
+          href="https://www.linkedin.com/in/dawid-stasi%C5%84ski-90b615172/"
+          target="_blank"
+          ><img src="assets/icons/linkedin.png" alt="LinkedIn"
+        /></a>
+        <a class="hidden" href="https://github.com/Korbielowski" target="_blank"
+          ><img src="assets/icons/github.png" alt="Github"
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>

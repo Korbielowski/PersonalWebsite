@@ -1,0 +1,41 @@
+{
+    "projects":[
+        {
+            "title": "BudgetForDummies",
+            "description": "Simple Python and Kivy app for managing budget. There are options to add, delete and show tables and charts of spendings and income.",
+            "image": "assets/projects/skyscraper.avif",
+            "alt": "Image of BudgetForDummies project",
+            "technologies": [
+                "Python",
+                "Kivy-lang"
+            ],
+            "github-link": "https://github.com/Korbielowski/Projekty-skryptowe",
+            "youtube-link": "https://www.youtube.com/embed/BalWYAvT-CI?si=LkDdvGVfnlbp344D"
+        },
+        {
+            "title": "Particle Physics",
+            "description": "Simple Particle physics engine with options to change basic options e.g. amount of particles, particles mass.",
+            "image": "",
+            "alt": "Image of Particle Physcis project",
+            "technologies": [
+                "C++",
+                "SFML"
+            ],
+            "github-link": "https://github.com/Korbielowski/ParticlePhysics",
+            "youtube-link": ""
+        },
+        {
+            "title": "",
+            "description": "",
+            "image": "",
+            "alt": "Image of Amazon-like website",
+            "technologies": [
+                "JavaScript",
+                "CSS",
+                "HTML"
+            ],
+            "github-link": "",
+            "youtube-link": ""
+        }
+    ]
+}
