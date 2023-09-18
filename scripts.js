@@ -14,7 +14,7 @@ function loadAnimations() {
 }
 
 async function loadProjects() {
-  const projectsFile = "projects.json";
+  const projectsFile = "src/projects.json";
   const projectsJSON = await (await fetch(projectsFile)).json();
   const projectsContainer = document.querySelector(".projects-container");
 
@@ -54,7 +54,7 @@ async function loadProjects() {
 }
 
 async function loadCarausel() {
-  const imagesFile = "carausel.json";
+  const imagesFile = "src/carausel.json";
   const imageContainer = document.querySelector(".image-container");
   const imagesJson = await (await fetch(imagesFile)).json();
 
