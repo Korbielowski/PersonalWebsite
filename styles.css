@@ -28,41 +28,76 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
+  --text-color: black;
+  --background-color: whitesmoke;
+  --components-color: #ffffff;
+  --bottom-bar-color: #121212;
+  font-size: 20px;
+  background-color: var(--background-color);
+  transition: ease-in-out 1s;
+}
+
+body.dark {
+  --text-color: #ffffff;
+  --background-color: #000000;
+  --components-color: #121212;
+  background-color: var(--background-color);
+  transition: ease-in-out 1s;
 }
 
 p {
   line-height: 5vh;
+  color: var(--text-color);
 }
 
-.navigationBar {
+.navigation-bar {
   z-index: 1;
   top: 0;
   position: sticky;
   overflow: hidden;
   width: 100%;
-  background-color: white;
+  background-color: var(--components-color);
   box-shadow: 0px 1px 6px grey;
 }
 
-.navigationBar a {
+.hyperlinks {
   float: right;
-  display: block;
-  color: black;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1vw;
   text-align: center;
-  padding: 1.5vh 1vw 1.5vh 1vw;
+  padding: 1.5vh 1vw;
+}
+
+.hyperlinks a {
+  color: var(--text-color);
   text-decoration: none;
 }
 
-.navigationBar a:hover {
-  color: #6bffb8;
+.theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
 }
 
-.navigationBar b {
+.hyperlinks a:hover,
+button:hover {
+  color: #6bffb8;
+  transition: ease-in-out 0.3s;
+}
+
+.hyperlinks div {
+  width: 2px;
+  background-color: var(--text-color);
+  height: 90%;
+}
+
+.navigation-bar b {
   float: left;
-  color: black;
+  color: var(--text-color);
   text-align: center;
-  padding: 1.5vh 1vw 1.5vh 1vw;
+  padding: 1.5vh 1vw;
   text-decoration: none;
   cursor: default;
   user-select: none;
@@ -75,19 +110,19 @@ p {
   transition: all 1s;
 }
 
-@media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
-}
-
 .show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
 }
 
-@keyframes show {
+/* @media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+} */
+
+/* @keyframes show {
   0% {
     opacity: 0;
     filter: blur(5px);
@@ -98,7 +133,7 @@ p {
     filter: blur(0);
     transform: translateX(0);
   }
-}
+} */
 
 .content {
   display: flex;
@@ -114,13 +149,13 @@ p {
   padding: 5vh 5vw;
   margin: 5vh 20vw 10vh 20vw;
   border-radius: 10px;
-  background-color: white;
+  background-color: var(--components-color);
   box-shadow: 0px 1px 6px grey;
 }
 
 .header h1 {
   grid-area: header;
-  color: black;
+  color: var(--text-color);
   font-size: 2rem;
   text-align: left;
   line-height: 10vh;
@@ -138,6 +173,7 @@ p {
 .header p {
   grid-area: description;
   font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 .about-heading,
@@ -155,9 +191,9 @@ p {
   margin: 0 20vw;
   padding: 2vh 2vw;
   border-radius: 10px;
-  color: black;
+  color: var(--text-color);
   font-size: 1.5rem;
-  background-color: white;
+  background-color: var(--components-color);
   box-shadow: 0px 1px 6px grey;
 }
 
@@ -181,14 +217,15 @@ p {
   margin-bottom: 50px;
   border-radius: 10px;
   min-height: 50vh;
-  background-color: white;
+  background-color: var(--components-color);
   box-shadow: 0px 1px 6px grey;
 }
 
 .project-title {
   grid-area: title;
   text-align: center;
-  font-size: 30px;
+  font-size: 2rem;
+  color: var(--text-color);
 }
 
 .project-image {
@@ -212,6 +249,7 @@ p {
   grid-area: description;
   text-align: left;
   font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 .project-technologies {
@@ -219,6 +257,7 @@ p {
   align-self: center;
   text-align: center;
   font-size: 2rem;
+  color: var(--text-color);
 }
 
 .project-links {
@@ -232,8 +271,9 @@ p {
   margin: 0 2vw;
   object-fit: contain;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   font-size: 2rem;
+  color: var(--text-color);
 }
 
 .carausel {
@@ -306,7 +346,7 @@ p {
   margin: 0 20vw;
   padding: 4vh 0;
   border-radius: 10px;
-  background-color: white;
+  background-color: var(--components-color);
   box-shadow: 0px 1px 6px grey;
 }
 
@@ -314,12 +354,12 @@ p {
 .mail a {
   display: grid;
   text-align: center;
-  color: black;
   text-decoration: none;
+  color: var(--text-color);
 }
 
-.location a img,
-.mail a img {
+.location a svg,
+.mail a svg {
   margin: 0 auto;
 }
 
@@ -328,15 +368,15 @@ p {
   font-size: 1.5rem;
 }
 
-.bottomBar {
+.bottom-bar {
   width: 100%;
   margin-top: 5vh;
   overflow: hidden;
-  background-color: black;
+  background-color: var(--bottom-bar-color);
 }
 
-.bottomBar a {
+.bottom-bar a {
   float: right;
   display: block;
-  padding: 1vh 1vw 1vh 1vw;
+  padding: 1vh 1vw;
 }

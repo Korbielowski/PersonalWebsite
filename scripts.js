@@ -63,12 +63,12 @@ async function loadCarausel() {
     if (imagesJson.images[0] === image) {
       imageContainer.insertAdjacentHTML(
         "beforeend",
-        `<img class="image-element active-image" src="${image}" alt="cos" onclick="zoomIn()"/>`
+        `<img class="image-element active-image" src="${image}" alt="carausel image" onclick="zoomIn()"/>`
       );
     } else {
       imageContainer.insertAdjacentHTML(
         "beforeend",
-        `<img class="image-element hidden-image" src="${image}" alt="cos" onclick="zoomIn()"/>`
+        `<img class="image-element hidden-image" src="${image}" alt="carausel image" onclick="zoomIn()"/>`
       );
     }
   });
@@ -94,7 +94,12 @@ function moveCarausel(offset) {
 }
 
 function zoomIn() {
-  console.log("hejka");
+  console.log("Image has been zoomed in");
+}
+
+function changeTheme() {
+  const body = document.querySelector("body");
+  body.classList.toggle("dark");
 }
 
 window.onload = function () {
